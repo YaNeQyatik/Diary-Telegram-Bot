@@ -17,7 +17,7 @@ bot.command('newentry', (ctx) => {
     if (!map.has(user)) {
       map.set(user, []);
     }
-    map.get(user).push({ text, time });
+    map.get(user).push({ text });
     ctx.reply(`Запись «${text}» успешно сохранена!`);
 });
 
