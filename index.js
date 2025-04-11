@@ -1,3 +1,17 @@
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000; // Render сам назначает порт
+
+// Минимальный эндпоинт для проверки
+app.get('/', (req, res) => {
+  res.send('Telegram bot is running!');
+});
+
+// Запуск сервера
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
 import { Telegraf } from 'telegraf';
 let bot = new Telegraf('7830090812:AAFM-5TH2TizkKIwy1yVh-gWv-wIlhACkGg');
 const map = new Map();
